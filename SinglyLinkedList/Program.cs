@@ -9,7 +9,6 @@ namespace DataStructures
         {
             /* *** *** *** LINKED LIST  *** *** *** */
             // Printing Linked List
-            /*
             var llist = new SinglyLinkedList();
             int llistCount = Convert.ToInt32(Console.ReadLine());
 
@@ -137,8 +136,7 @@ namespace DataStructures
 
             Console.WriteLine("Reversed linked list . Option2..");
             PrintLinkedList(ReverseOption2(llist.head));
-            */
-
+            
             //Merge Sorted lists
             // int tests = Convert.ToInt32(Console.ReadLine());
             SinglyLinkedList mergeList1= new SinglyLinkedList();
@@ -169,7 +167,7 @@ namespace DataStructures
             Console.WriteLine("Combined list elements");
             PrintLinkedList(combinedList);
 
-            /* *** *** *** LINKED LIST  *** *** *** */          
+            /* *** *** *** LINKED LIST  *** *** *** */
         }
     }
 }

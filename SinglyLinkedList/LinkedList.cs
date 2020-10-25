@@ -40,6 +40,9 @@ namespace DataStructures
             }
         }
 
+        // Given a pointer to the head node of a linked list, print each node's  element, one per line. 
+        // If the head pointer is null (indicating the list is empty), there is nothing to print.
+
         public static void PrintLinkedList(SinglyLinkedListNode head)
         {
             SinglyLinkedListNode node = head;
@@ -49,6 +52,10 @@ namespace DataStructures
                 node = node.next;
             }
         }
+
+        // Create a new node with the given integer. Insert this node at the tail of the linked list
+        // and return the head node of the linked list formed after inserting this new node. 
+        // The given head pointer may be null, meaning that the initial list is empty.
         public static SinglyLinkedListNode InsertNodeAtTail(SinglyLinkedListNode head, int data)
         {
             SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
@@ -67,6 +74,10 @@ namespace DataStructures
             }
             return head;
         }
+        
+        // Given a pointer to the head of a linked list, insert a new node before the head.
+        // The  value in the new node should point to  and the  value should be replaced with a given value.Return a reference to the new head of the list.
+        // The head pointer given may be null meaning that the initial list is empty.
         public static SinglyLinkedListNode InsertNodeAtHead(SinglyLinkedListNode llist, int data)
         {
             SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
@@ -75,6 +86,11 @@ namespace DataStructures
                 newNode.next = llist;
             return newNode;
         }
+
+        // Given the pointer to the head node of a linked list and an integer to insert at a certain position
+        // , create a new node with the given integer as its attribute, 
+        // insert this node at the desired position and return the head node.
+
         public static SinglyLinkedListNode InsertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
         {
             SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
@@ -109,6 +125,8 @@ namespace DataStructures
             return head;
         }
 
+        // Delete the node at a given position in a linked list and return a reference to the head node. 
+        // The head is at position 0. The list may be empty after you delete the node. In that case, return a null value.
         public static SinglyLinkedListNode DeleteNode(SinglyLinkedListNode head, int position)
         {
             if (head != null)
@@ -133,6 +151,9 @@ namespace DataStructures
 
             return head;
         }
+
+        // Given a pointer to the head of a singly-linked list, print each  value from the reversed list. 
+        // If the given list is empty, do not print anything.
         public static void ReversePrint(SinglyLinkedListNode head)
         {
             if (head != null)
@@ -141,6 +162,9 @@ namespace DataStructures
                 Console.WriteLine(head.data);
             }
         }
+
+        // Given the pointer to the head node of a linked list, change the next pointers of the nodes so that their order is reversed. 
+        // The head pointer given may be null meaning that the initial list is empty.
         public static SinglyLinkedListNode ReverseOption1(SinglyLinkedListNode head)
         {
             // no node or only one node
@@ -174,6 +198,8 @@ namespace DataStructures
             return remaining;
         }
 
+        // Given pointers to the heads of two sorted linked lists, merge them into a single, sorted linked list.
+        // Either head pointer may be null meaning that the corresponding list is empty.
         public static SinglyLinkedListNode MergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2)
         {
             if (head1 == null && head2 == null) return null;
