@@ -219,5 +219,18 @@ namespace DataStructures
             }
             return mergedNode;
         }
+
+        // Given a pointer to the head of a linked list and a specific position, determine the data value at that position.
+        // Count backwards from the tail node. The tail is at postion 0, its parent is at 1 and so on
+        public static int GetNode(SinglyLinkedListNode head, int positionFromTail)
+        {
+            SinglyLinkedListNode temp = head;
+            for (int i = 0; head.next != null; i++)
+            {
+                head = head.next;
+                if (i >= positionFromTail) temp = temp.next;
+            }
+            return temp.data;
+        }
     }
 }
