@@ -18,6 +18,7 @@ namespace DataStructures
             6. Print linked list in reverse
             7. Merge Sorted lists
             8. Get node at specified poistion from tail
+            9. Delete duplicate-value nodes from a sorted linked list
     ");
             int action = Convert.ToInt32(Console.ReadLine());
             int position;
@@ -215,6 +216,24 @@ namespace DataStructures
                     int result = GetNode(llist10.head, position);
 
                     Console.WriteLine($"Element at position {position} is: {result}");
+                    break;
+                case 9:
+                    // Delete duplicate-value nodes from a sorted linked list
+                    SinglyLinkedList listDupl = new SinglyLinkedList();
+                    Console.WriteLine("How many elements in list?");
+                    int listDuplCount = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("Enter the elements");
+                    for (int i = 0; i < listDuplCount; i++)
+                    {
+                        int llistItem = Convert.ToInt32(Console.ReadLine());
+                        listDupl.InsertNode(llistItem);
+                    }
+                    SinglyLinkedListNode listDuplicateRemoved = RemoveDuplicates(listDupl.head);
+
+                    Console.WriteLine("Removed duplicates from the list");
+                    PrintLinkedList(listDuplicateRemoved);
+
                     break;
                 default:
                     break;

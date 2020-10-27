@@ -232,5 +232,15 @@ namespace DataStructures
             }
             return temp.data;
         }
+        public static SinglyLinkedListNode RemoveDuplicates(SinglyLinkedListNode head)
+        {
+            if (head == null) return null;
+            SinglyLinkedListNode nextNode = head.next;
+            while (nextNode != null && head.data == nextNode.data)
+                nextNode = nextNode.next;
+            
+            head.next = RemoveDuplicates(nextNode);
+            return head;
+        }
     }
 }
